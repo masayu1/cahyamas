@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cahya Mas - Toko Buku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#">Beranda</a>
+  <a href="#produk">Produk</a>
+  <a href="#form">Checkout</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<header>
+  <img src="profil.jpeg" alt="Foto Profil Cahya Mas" class="foto-profil">
+  <h1>Cahya Mas</h1>
+  <p>⭐ 4.8 | 100+ Pengikut</p>
+  <p>
+    Cahya Mas adalah platform katalog novel yang menghadirkan berbagai cerita menarik dari berbagai genre, 
+    mulai dari romansa, fantasi, hingga misteri.
+  </p>
+</header>
+
+<main class="container">
+
+<div id="preview"></div>
+
+<section id="produk">
+  <h2>Daftar Buku</h2>
+  <div class="cards" id="bookList"></div>
+
+  <h3>Tambah Buku</h3>
+  <input type="text" id="judul" placeholder="Judul">
+  <input type="text" id="penulis" placeholder="Penulis">
+  <input type="number" id="harga" placeholder="Harga">
+  <button onclick="tambahBuku()">Tambah Buku</button>
+</section>
+
+<!-- FORM -->
+<section id="form">
+  <form id="formBeli">
+
+    <h3>Data Buku</h3>
+    <label>Pilih Buku</label>
+    <select id="buku">
+      <option value="">-- Pilih Buku --</option>
+      <option>Novel Romansa</option>
+      <option>Novel Fantasi</option>
+      <option>Novel Misteri</option>
+    </select>
+    <span id="errBuku" class="error"></span>
+
+    <h3>Data Pemesan</h3>
+
+    <label>Nama</label>
+    <input type="text" id="nama"  placeholder="nama">
+    <span id="errNama" class="error"></span>
+
+    <label>Email</label>
+    <input type="email" id="email"  placeholder="emai">
+    <span id="errEmail" class="error"></span>
+
+    <label>Password</label>
+<label>Password</label>
+
+<div class="input-password">
+  <input type="password" id="password"  placeholder="password">
+  <span onclick="lihatPassword()">👁️</span>
+</div>
+
+<span id="errPassword" class="error"></span>
+
+    <label>No HP</label>
+    <input type="tel" id="hp" placeholder="No HP">
+    <span id="errHp" class="error"></span>
+
+    <h3>Pembayaran</h3>
+    <label>Metode Pembayaran</label>
+    <select id="pembayaran">
+      <option value="">-- Pilih --</option>
+      <option>Transfer Bank</option>
+      <option>COD</option>
+      <option>E-Wallet</option>
+    </select>
+    <span id="errBayar" class="error"></span>
+
+    <!-- PENGIRIMAN -->
+    <h3>Jenis Pengiriman</h3>
+    <input type="radio" name="kirim" value="Reguler"> Reguler (5-10 hari)
+    <input type="radio" name="kirim" value="Express"> Express (1-3 hari)
+    <span id="errKirim" class="error"></span>
+
+    <!-- CHECKBOX -->
+    <label>
+      <input type="checkbox" id="setuju">
+      Saya menyetujui syarat & ketentuan
+    </label>
+    <span id="errSetuju" class="error"></span>
+
+    <!-- TOMBOL (SUDAH DI DALAM FORM) -->
+    <button type="submit">Beli sekarang</button>
+
+  </form>
+</section>
+
+</main>
+
+<!-- KONTAK (DI LUAR FORM) -->
+<section id="kontak" class="footer-contact">
+  <h4>Kontak kami</h4>
+  <p>📧 info@cahyamas.id</p>
+  <p>📞 0838-7850-8069</p>
+  <p>📍 Medan, Sumatera Utara</p>
+</section>
+
+<footer>
+  <p>© 2026 Cahya Mas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
